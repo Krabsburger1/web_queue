@@ -7,7 +7,8 @@ function generateId() {
     return Math.random().toString(36).substring(2, 9)
 }
 
-const today = getLocalDateString()
+// No module-level 'today' constant to avoid stale dates in long sessions
+
 
 
 const seedBookings = [
@@ -79,6 +80,7 @@ export default function useBookings() {
     }, [bookings])
 
     const addBooking = useCallback((booking) => {
+        const today = getLocalDateString()
         const newBooking = {
             ...booking,
             id: generateId(),
@@ -107,6 +109,7 @@ export default function useBookings() {
     }, [])
 
     const callNextLive = useCallback(() => {
+        const today = getLocalDateString()
         setBookings(prev => {
             const liveWaiting = prev
                 .filter(b => b.type === 'live' && b.status === 'waiting' && b.date === today)
@@ -120,6 +123,7 @@ export default function useBookings() {
     }, [])
 
     const getTodayBookings = useCallback(() => {
+        const today = getLocalDateString()
         return bookings.filter(b => b.date === today)
     }, [bookings])
 
@@ -130,12 +134,14 @@ export default function useBookings() {
     }, [bookings])
 
     const getLiveQueueCount = useCallback(() => {
+        const today = getLocalDateString()
         return bookings.filter(
             b => b.type === 'live' && b.status === 'waiting' && b.date === today
         ).length
     }, [bookings])
 
     const getNextQueuePosition = useCallback(() => {
+        const today = getLocalDateString()
         const liveBookings = bookings.filter(b => b.type === 'live' && b.date === today)
         if (liveBookings.length === 0) return 1
         return Math.max(...liveBookings.map(b => b.queuePosition || 0)) + 1
@@ -153,4 +159,5 @@ export default function useBookings() {
         getNextQueuePosition,
     }
 }
+
 
