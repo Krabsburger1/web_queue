@@ -27,13 +27,17 @@ export default function App() {
   const [confirmedBooking, setConfirmedBooking] = useState(null)
   const [adminTab, setAdminTab] = useState('queue')
 
-  const path = window.location.pathname
+  // Simple path normalization
+  const rawPath = window.location.pathname
+  const normalizedPath = rawPath.replace(/\/$/, '') // Remove trailing slash
+  const isAdminRoute = normalizedPath.endsWith('/admin')
 
   // Admin route
-  if (path === '/admin') {
+  if (isAdminRoute) {
     if (!isAuthenticated) {
       return <LoginPage onLogin={login} />
     }
+
 
     return (
       <AdminLayout activeTab={adminTab} onTabChange={setAdminTab} onLogout={logout}>

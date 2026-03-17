@@ -21,7 +21,10 @@ export default function useAuth() {
     const logout = useCallback(() => {
         localStorage.removeItem(AUTH_KEY)
         setIsAuthenticated(false)
-        window.location.href = '/'
+        // Redirect to the base path (one level above /admin or just / if at root)
+        const currentPath = window.location.pathname
+        const basePath = currentPath.substring(0, currentPath.lastIndexOf('/admin')) || '/'
+        window.location.href = basePath
     }, [])
 
     return { isAuthenticated, login, logout }
