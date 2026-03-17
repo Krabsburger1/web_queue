@@ -20,10 +20,10 @@ export default function LoginPage({ onLogin }) {
             <div className="w-full max-w-sm">
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-200">
-                            <span className="text-white font-bold text-lg">F</span>
+                        <div className="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center shadow-lg shadow-green-200">
+                            <span className="text-white font-black text-xl">Q</span>
                         </div>
-                        <span className="text-2xl font-bold text-gray-900">FinBank</span>
+                        <span className="text-2xl font-bold text-gray-900">Online Queue</span>
                     </div>
                     <p className="text-gray-500">Admin Portal</p>
                 </div>

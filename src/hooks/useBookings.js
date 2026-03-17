@@ -20,7 +20,7 @@ const seedBookings = [
         slotTime: '09:30',
         queuePosition: null,
         status: 'waiting',
-        date: today,
+        date: getLocalDateString(),
         createdAt: new Date().toISOString(),
     },
     {
@@ -31,7 +31,7 @@ const seedBookings = [
         slotTime: '11:00',
         queuePosition: null,
         status: 'in-progress',
-        date: today,
+        date: getLocalDateString(),
         createdAt: new Date().toISOString(),
     },
     {
@@ -42,7 +42,7 @@ const seedBookings = [
         slotTime: null,
         queuePosition: 1,
         status: 'waiting',
-        date: today,
+        date: getLocalDateString(),
         createdAt: new Date().toISOString(),
     },
     {
@@ -53,7 +53,7 @@ const seedBookings = [
         slotTime: null,
         queuePosition: 2,
         status: 'waiting',
-        date: today,
+        date: getLocalDateString(),
         createdAt: new Date().toISOString(),
     },
     {
@@ -64,7 +64,7 @@ const seedBookings = [
         slotTime: '14:00',
         queuePosition: null,
         status: 'done',
-        date: today,
+        date: getLocalDateString(),
         createdAt: new Date().toISOString(),
     },
 ]

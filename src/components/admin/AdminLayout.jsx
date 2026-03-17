@@ -14,9 +14,9 @@ export default function AdminLayout({ activeTab, onTabChange, onLogout, children
             <header className="md:hidden bg-green-950 text-white p-4 flex items-center justify-between sticky top-0 z-20 shadow-md">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">F</span>
+                        <span className="text-white font-bold text-sm">Q</span>
                     </div>
-                    <h1 className="font-bold text-sm tracking-tight">FinBank <span className="text-green-400 font-normal">Admin</span></h1>
+                    <h1 className="font-bold text-sm tracking-tight">Online Queue <span className="text-green-400 font-normal">Admin</span></h1>
                 </div>
                 <button
                     onClick={onLogout}
@@ -31,10 +31,10 @@ export default function AdminLayout({ activeTab, onTabChange, onLogout, children
                 <div className="p-5 border-b border-green-800">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">F</span>
+                            <span className="text-white font-bold text-lg">Q</span>
                         </div>
                         <div>
-                            <h1 className="font-bold text-base">FinBank</h1>
+                            <h1 className="font-bold text-base">Online Queue</h1>
                             <p className="text-green-400 text-xs">Admin Panel</p>
                         </div>
                     </div>

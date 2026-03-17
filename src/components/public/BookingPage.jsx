@@ -57,10 +57,10 @@ export default function BookingPage({
                 <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-200">
-                            <span className="text-white font-bold text-lg">F</span>
+                            <span className="text-white font-bold text-lg">Q</span>
                         </div>
                         <div>
-                            <h1 className="text-lg font-bold text-gray-900">FinBank</h1>
+                            <h1 className="text-lg font-bold text-gray-900">Online Queue</h1>
                             <p className="text-xs text-gray-400">Quick and convenient appointment booking</p>
                         </div>
                     </div>
