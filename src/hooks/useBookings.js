@@ -11,63 +11,7 @@ function generateId() {
 
 
 
-const seedBookings = [
-    {
-        id: generateId(),
-        name: 'Alexander Petrov',
-        phone: '+1 (555) 101-2001',
-        type: 'slot',
-        slotTime: '09:30',
-        queuePosition: null,
-        status: 'waiting',
-        date: getLocalDateString(),
-        createdAt: new Date().toISOString(),
-    },
-    {
-        id: generateId(),
-        name: 'Maria Johnson',
-        phone: '+1 (555) 202-3002',
-        type: 'slot',
-        slotTime: '11:00',
-        queuePosition: null,
-        status: 'in-progress',
-        date: getLocalDateString(),
-        createdAt: new Date().toISOString(),
-    },
-    {
-        id: generateId(),
-        name: 'David Chen',
-        phone: '+1 (555) 303-4003',
-        type: 'live',
-        slotTime: null,
-        queuePosition: 1,
-        status: 'waiting',
-        date: getLocalDateString(),
-        createdAt: new Date().toISOString(),
-    },
-    {
-        id: generateId(),
-        name: 'Sarah Williams',
-        phone: '+1 (555) 404-5004',
-        type: 'live',
-        slotTime: null,
-        queuePosition: 2,
-        status: 'waiting',
-        date: getLocalDateString(),
-        createdAt: new Date().toISOString(),
-    },
-    {
-        id: generateId(),
-        name: 'James Rodriguez',
-        phone: '+1 (555) 505-6005',
-        type: 'slot',
-        slotTime: '14:00',
-        queuePosition: null,
-        status: 'done',
-        date: getLocalDateString(),
-        createdAt: new Date().toISOString(),
-    },
-]
+const seedBookings = []
 
 export default function useBookings() {
     const [bookings, setBookings] = useState(() => {
