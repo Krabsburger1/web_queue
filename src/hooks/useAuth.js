@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 
-const ADMIN_EMAIL = 'admin@finbank.com'
-const ADMIN_PASSWORD = 'admin123'
+const ADMIN_EMAIL = 'ibrahimgrrr5@gmail.com'
+const ADMIN_PASSWORD = 'davud2010'
 const AUTH_KEY = 'finbank_auth'
 
 export default function useAuth() {
